@@ -1,0 +1,1138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VrajjVastu - Holistic Energy Healing & Spiritual Growth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --deep-blue: #0c025d;
+            --vibrant-yellow: #ffff00;
+            --royal-purple: #560568;
+            --mystic-maroon: #500032;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f9f9ff;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+        }
+        
+        .section {
+            padding: 5rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background: var(--vibrant-yellow);
+            color: var(--deep-blue);
+            border: 2px solid var(--vibrant-yellow);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--vibrant-yellow);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--vibrant-yellow);
+            border: 2px solid var(--vibrant-yellow);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--vibrant-yellow);
+            color: var(--deep-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--vibrant-yellow);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        
+        .nav-link.active::after {
+            width: 80%;
+        }
+        
+        .chakra-bg {
+            background: linear-gradient(135deg, #0c025d 0%, #560568 50%, #500032 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chakra-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='rgba(255,255,255,0.1)' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='rgba(255,255,255,0.1)' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='20' fill='none' stroke='rgba(255,255,255,0.1)' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='10' fill='none' stroke='rgba(255,255,255,0.1)' stroke-width='1'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .wave-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .wave-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 70px;
+        }
+        
+        .wave-divider .shape-fill {
+            fill: #f9f9ff;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--deep-blue), var(--royal-purple));
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-icon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 30%, rgba(255,255,255,0.1) 70%);
+            transform: scale(0);
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-icon::after {
+            transform: scale(2);
+        }
+        
+        .crystal-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 300px;
+        }
+        
+        .crystal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .crystal-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .crystal-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            padding: 1.5rem;
+            color: white;
+            transform: translateY(70%);
+            transition: all 0.3s ease;
+        }
+        
+        .crystal-card:hover .crystal-overlay {
+            transform: translateY(0);
+        }
+        
+        .crystal-card:hover .crystal-image {
+            transform: scale(1.1);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            font-family: 'Georgia', serif;
+            color: rgba(86, 5, 104, 0.1);
+            line-height: 1;
+        }
+        
+        .star-rating {
+            color: gold;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Lato', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--royal-purple);
+            box-shadow: 0 0 0 2px rgba(86, 5, 104, 0.2);
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--deep-blue);
+            color: white;
+            border-radius: 50%;
+            margin-right: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            background: var(--royal-purple);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            transform: translateX(-10px);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--deep-blue);
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                transition: all 0.5s ease-in-out;
+                z-index: 100;
+            }
+            
+            .nav-links.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            
+            .nav-link {
+                margin: 1rem 0;
+            }
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Chakra animation */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .chakra-spinner {
+            animation: rotate 20s linear infinite;
+        }
+        
+        /* Crystal filter buttons */
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            background: transparent;
+            border: 1px solid var(--royal-purple);
+            color: var(--royal-purple);
+            margin: 0 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--royal-purple);
+            color: white;
+        }
+        
+        /* Page transitions */
+        .page {
+            display: none;
+            animation: fadeEffect 1s;
+        }
+        
+        @keyframes fadeEffect {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        /* Mandala background for testimonials */
+        .mandala-bg {
+            background-color: #f9f9ff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23560568' stroke-width='1'%3E%3Ccircle cx='400' cy='400' r='250'/%3E%3Ccircle cx='400' cy='400' r='200'/%3E%3Ccircle cx='400' cy='400' r='150'/%3E%3Ccircle cx='400' cy='400' r='100'/%3E%3Ccircle cx='400' cy='400' r='50'/%3E%3C/g%3E%3Cg fill='none' stroke='%23500032' stroke-width='1'%3E%3Cline x1='0' y1='400' x2='800' y2='400'/%3E%3Cline x1='400' y1='0' x2='400' y2='800'/%3E%3Cline x1='100' y1='100' x2='700' y2='700'/%3E%3Cline x1='700' y1='100' x2='100' y2='700'/%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-opacity-90 bg-[#0c025d] z-50 shadow-md">
+        <div class="container mx-auto py-4 px-6 flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold font-['Cinzel']">
+                <span class="text-[#ffff00]">Vrajj</span>Vastu
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-links hidden md:flex space-x-4">
+                <a href="#about" class="nav-link" data-page="about">About Us</a>
+                <a href="#services" class="nav-link" data-page="services">Services</a>
+                <a href="#crystals" class="nav-link" data-page="crystals">Crystals</a>
+                <a href="#testimonials" class="nav-link" data-page="testimonials">Testimonials</a>
+                <a href="#contact" class="nav-link" data-page="contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- About Us Page -->
+        <section id="about" class="page active chakra-bg section relative">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in">
+                        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Welcome to <span class="text-[#ffff00]">VrajjVastu</span></h1>
+                        <p class="text-white text-lg mb-6">Your holistic partner for energy healing and spiritual growth. With over <strong>15 years of Reiki Healing</strong> and <strong>8 years as a Vastu Consultant</strong>, we provide transformative services rooted in ancient Indian wisdom.</p>
+                        <p class="text-white text-lg mb-8">Our offerings blend <strong>intuition</strong>, <strong>certified spiritual methods</strong>, and <strong>personalized guidance</strong> to help you manifest balance, abundance, and clarity in life.</p>
+                        
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <div class="glass-card text-white text-center">
+                                <i class="fas fa-certificate text-[#ffff00] text-3xl mb-2"></i>
+                                <p>Certified Reiki Master</p>
+                            </div>
+                            <div class="glass-card text-white text-center">
+                                <i class="fas fa-home text-[#ffff00] text-3xl mb-2"></i>
+                                <p>Vastu Expert</p>
+                            </div>
+                            <div class="glass-card text-white text-center">
+                                <i class="fas fa-gem text-[#ffff00] text-3xl mb-2"></i>
+                                <p>Crystal Healer</p>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="btn btn-primary">Begin Your Journey</a>
+                    </div>
+                    
+                    <div class="fade-in flex justify-center">
+                        <div class="relative">
+                            <svg class="chakra-spinner" width="400" height="400" viewBox="0 0 400 400">
+                                <!-- Root Chakra -->
+                                <circle cx="200" cy="200" r="180" fill="none" stroke="#FF0000" stroke-width="2" opacity="0.7"/>
+                                <!-- Sacral Chakra -->
+                                <circle cx="200" cy="200" r="150" fill="none" stroke="#FF7F00" stroke-width="2" opacity="0.7"/>
+                                <!-- Solar Plexus Chakra -->
+                                <circle cx="200" cy="200" r="120" fill="none" stroke="#FFFF00" stroke-width="2" opacity="0.7"/>
+                                <!-- Heart Chakra -->
+                                <circle cx="200" cy="200" r="90" fill="none" stroke="#00FF00" stroke-width="2" opacity="0.7"/>
+                                <!-- Throat Chakra -->
+                                <circle cx="200" cy="200" r="60" fill="none" stroke="#00FFFF" stroke-width="2" opacity="0.7"/>
+                                <!-- Third Eye Chakra -->
+                                <circle cx="200" cy="200" r="30" fill="none" stroke="#0000FF" stroke-width="2" opacity="0.7"/>
+                                <!-- Crown Chakra -->
+                                <circle cx="200" cy="200" r="15" fill="none" stroke="#8B00FF" stroke-width="2" opacity="0.7"/>
+                                
+                                <!-- Connecting lines -->
+                                <line x1="20" y1="200" x2="380" y2="200" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                                <line x1="200" y1="20" x2="200" y2="380" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                                <line x1="56" y1="56" x2="344" y2="344" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                                <line x1="344" y1="56" x2="56" y2="344" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                            </svg>
+                            
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center bg-[#0c025d] bg-opacity-80 p-6 rounded-full w-48 h-48 flex items-center justify-center">
+                                <p class="text-white italic text-lg">"When energy flows right, life feels light."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="wave-divider">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Services Page -->
+        <section id="services" class="page section bg-gradient-to-b from-[#f9f9ff] to-[#f0f0ff]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl font-bold text-[#0c025d] mb-4">Our Services</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover our range of spiritual and healing services designed to bring balance, clarity, and positive energy into your life.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0c025d] mb-2">Specialised Intuition Power</h3>
+                        <p class="text-gray-600">Unlock your inner wisdom and enhance your intuitive abilities</p>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0c025d] mb-2">Astro Vastu</h3>
+                        <p class="text-gray-600">Harmonize your living spaces with cosmic energies</p>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-hand-sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0c025d] mb-2">Reiki Healing</h3>
+                        <p class="text-gray-600">Channel universal energy for physical and emotional healing</p>
+                    </div>
+                    
+                    <!-- Service 4 -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0c025d] mb-2">Dowser</h3>
+                        <p class="text-gray-600">Detect energy fields and locate beneficial resources</p>
+                    </div>
+                    
+                    <!-- Service 5 -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-om"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0c025d] mb-2">Mantra Vortex Energies</h3>
+                        <p class="text-gray-600">Harness the power of sacred sounds for transformation</p>
+                    </div>
+                    
+                    <!-- Service 6 -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-pray"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0c025d] mb-2">Lama fera Healing</h3>
+                        <p class="text-gray-600">Ancient Tibetan energy healing for deep spiritual cleansing</p>
+                    </div>
+                    
+                    <!-- Service 7 -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-hand-paper"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0c025d] mb-2">Palmistry</h3>
+                        <p class="text-gray-600">Reveal your life path through the ancient art of palm reading</p>
+                    </div>
+                    
+                    <!-- Service 8 -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0c025d] mb-2">Astrology</h3>
+                        <p class="text-gray-600">Cosmic guidance based on celestial movements and birth charts</p>
+                    </div>
+                    
+                    <!-- Service 9 -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-sort-numeric-up"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#0c025d] mb-2">Numerology</h3>
+                        <p class="text-gray-600">Discover the mystical significance of numbers in your life</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crystals Page -->
+        <section id="crystals" class="page section bg-gradient-to-b from-[#f0f0ff] to-[#e8e8ff]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl font-bold text-[#0c025d] mb-4">Crystals & Gemstones</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover our collection of carefully selected crystals and gemstones to enhance your spiritual journey and bring positive energies into your life.</p>
+                </div>
+                
+                <div class="mb-8 text-center fade-in">
+                    <button class="filter-btn active" data-filter="all">All Crystals</button>
+                    <button class="filter-btn" data-filter="protection">For Protection</button>
+                    <button class="filter-btn" data-filter="wealth">For Wealth</button>
+                    <button class="filter-btn" data-filter="peace">For Peace</button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Crystal 1 -->
+                    <div class="crystal-card fade-in" data-category="peace protection">
+                        <div class="crystal-image bg-purple-300 flex items-center justify-center">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <path fill="#9F7AEA" d="M100,20 L160,70 L140,150 L60,150 L40,70 Z" />
+                                <path fill="#805AD5" d="M100,20 L160,70 L140,150 L100,130 Z" />
+                                <path fill="#B794F4" d="M100,20 L100,130 L60,150 L40,70 Z" />
+                                <path fill="#D6BCFA" d="M100,130 L140,150 L60,150 Z" />
+                            </svg>
+                        </div>
+                        <div class="crystal-overlay">
+                            <h3 class="text-xl font-bold mb-1">Amethyst</h3>
+                            <p class="text-sm mb-4">Calming, spiritual connection</p>
+                            <a href="#contact" class="btn btn-primary btn-sm">Inquire Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Crystal 2 -->
+                    <div class="crystal-card fade-in" data-category="wealth">
+                        <div class="crystal-image bg-yellow-300 flex items-center justify-center">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <path fill="#FCD34D" d="M100,20 L160,70 L140,150 L60,150 L40,70 Z" />
+                                <path fill="#F59E0B" d="M100,20 L160,70 L140,150 L100,130 Z" />
+                                <path fill="#FBBF24" d="M100,20 L100,130 L60,150 L40,70 Z" />
+                                <path fill="#FDE68A" d="M100,130 L140,150 L60,150 Z" />
+                            </svg>
+                        </div>
+                        <div class="crystal-overlay">
+                            <h3 class="text-xl font-bold mb-1">Citrine</h3>
+                            <p class="text-sm mb-4">Prosperity and joy</p>
+                            <a href="#contact" class="btn btn-primary btn-sm">Inquire Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Crystal 3 -->
+                    <div class="crystal-card fade-in" data-category="protection wealth">
+                        <div class="crystal-image bg-yellow-600 flex items-center justify-center">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <path fill="#B45309" d="M100,20 L160,70 L140,150 L60,150 L40,70 Z" />
+                                <path fill="#92400E" d="M100,20 L160,70 L140,150 L100,130 Z" />
+                                <path fill="#D97706" d="M100,20 L100,130 L60,150 L40,70 Z" />
+                                <path fill="#F59E0B" d="M100,130 L140,150 L60,150 Z" />
+                            </svg>
+                        </div>
+                        <div class="crystal-overlay">
+                            <h3 class="text-xl font-bold mb-1">Pyrite</h3>
+                            <p class="text-sm mb-4">Protection, creativity, manifestation</p>
+                            <a href="#contact" class="btn btn-primary btn-sm">Inquire Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Crystal 4 -->
+                    <div class="crystal-card fade-in" data-category="wealth peace">
+                        <div class="crystal-image bg-green-400 flex items-center justify-center">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <path fill="#10B981" d="M100,20 L160,70 L140,150 L60,150 L40,70 Z" />
+                                <path fill="#059669" d="M100,20 L160,70 L140,150 L100,130 Z" />
+                                <path fill="#34D399" d="M100,20 L100,130 L60,150 L40,70 Z" />
+                                <path fill="#6EE7B7" d="M100,130 L140,150 L60,150 Z" />
+                            </svg>
+                        </div>
+                        <div class="crystal-overlay">
+                            <h3 class="text-xl font-bold mb-1">Jade</h3>
+                            <p class="text-sm mb-4">Luck, serenity</p>
+                            <a href="#contact" class="btn btn-primary btn-sm">Inquire Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Crystal 5 -->
+                    <div class="crystal-card fade-in" data-category="peace">
+                        <div class="crystal-image bg-green-300 flex items-center justify-center">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <path fill="#6EE7B7" d="M100,20 L160,70 L140,150 L60,150 L40,70 Z" />
+                                <path fill="#34D399" d="M100,20 L160,70 L140,150 L100,130 Z" />
+                                <path fill="#A7F3D0" d="M100,20 L100,130 L60,150 L40,70 Z" />
+                                <path fill="#D1FAE5" d="M100,130 L140,150 L60,150 Z" />
+                            </svg>
+                        </div>
+                        <div class="crystal-overlay">
+                            <h3 class="text-xl font-bold mb-1">Green Aventurine</h3>
+                            <p class="text-sm mb-4">Emotional healing</p>
+                            <a href="#contact" class="btn btn-primary btn-sm">Inquire Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Crystal 6 -->
+                    <div class="crystal-card fade-in" data-category="protection peace">
+                        <div class="crystal-image bg-gray-100 flex items-center justify-center">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <path fill="#F3F4F6" d="M100,20 L160,70 L140,150 L60,150 L40,70 Z" />
+                                <path fill="#E5E7EB" d="M100,20 L160,70 L140,150 L100,130 Z" />
+                                <path fill="#F9FAFB" d="M100,20 L100,130 L60,150 L40,70 Z" />
+                                <path fill="#FFFFFF" d="M100,130 L140,150 L60,150 Z" />
+                            </svg>
+                        </div>
+                        <div class="crystal-overlay">
+                            <h3 class="text-xl font-bold mb-1">Clear Quartz</h3>
+                            <p class="text-sm mb-4">Energy amplifier</p>
+                            <a href="#contact" class="btn btn-primary btn-sm">Inquire Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Crystal 7 -->
+                    <div class="crystal-card fade-in" data-category="protection">
+                        <div class="crystal-image bg-yellow-800 flex items-center justify-center">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <path fill="#92400E" d="M100,20 L160,70 L140,150 L60,150 L40,70 Z" />
+                                <path fill="#78350F" d="M100,20 L160,70 L140,150 L100,130 Z" />
+                                <path fill="#B45309" d="M100,20 L100,130 L60,150 L40,70 Z" />
+                                <path fill="#D97706" d="M100,130 L140,150 L60,150 Z" />
+                            </svg>
+                        </div>
+                        <div class="crystal-overlay">
+                            <h3 class="text-xl font-bold mb-1">Tiger Eye</h3>
+                            <p class="text-sm mb-4">Confidence, courage</p>
+                            <a href="#contact" class="btn btn-primary btn-sm">Inquire Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Crystal 8 -->
+                    <div class="crystal-card fade-in" data-category="peace protection">
+                        <div class="crystal-image bg-gray-200 flex items-center justify-center">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <path fill="#E5E7EB" d="M100,20 L160,70 L140,150 L60,150 L40,70 Z" />
+                                <path fill="#D1D5DB" d="M100,20 L160,70 L140,150 L100,130 Z" />
+                                <path fill="#F3F4F6" d="M100,20 L100,130 L60,150 L40,70 Z" />
+                                <path fill="#F9FAFB" d="M100,130 L140,150 L60,150 Z" />
+                            </svg>
+                        </div>
+                        <div class="crystal-overlay">
+                            <h3 class="text-xl font-bold mb-1">Selenite</h3>
+                            <p class="text-sm mb-4">Cleansing, divine peace</p>
+                            <a href="#contact" class="btn btn-primary btn-sm">Inquire Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Crystal 9 (Extra) -->
+                    <div class="crystal-card fade-in" data-category="wealth protection">
+                        <div class="crystal-image bg-red-400 flex items-center justify-center">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <path fill="#F87171" d="M100,20 L160,70 L140,150 L60,150 L40,70 Z" />
+                                <path fill="#EF4444" d="M100,20 L160,70 L140,150 L100,130 Z" />
+                                <path fill="#FCA5A5" d="M100,20 L100,130 L60,150 L40,70 Z" />
+                                <path fill="#FEE2E2" d="M100,130 L140,150 L60,150 Z" />
+                            </svg>
+                        </div>
+                        <div class="crystal-overlay">
+                            <h3 class="text-xl font-bold mb-1">Red Jasper</h3>
+                            <p class="text-sm mb-4">Strength, vitality, protection</p>
+                            <a href="#contact" class="btn btn-primary btn-sm">Inquire Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Page -->
+        <section id="testimonials" class="page section mandala-bg">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl font-bold text-[#0c025d] mb-4">Client Testimonials</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Hear from those who have experienced the transformative power of our spiritual services.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card fade-in">
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">"The Reiki healing session was truly transformative. I felt a deep sense of peace and clarity that I hadn't experienced in years. Highly recommended!"</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-[#560568] rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                AM
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#0c025d]">Anita M.</h4>
+                                <p class="text-sm text-gray-500">Reiki Client</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card fade-in">
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">"The Vastu consultation completely changed the energy in our home. We've noticed improved relationships, better sleep, and even unexpected financial gains since implementing the changes."</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-[#500032] rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                RK
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#0c025d]">Rajesh K.</h4>
+                                <p class="text-sm text-gray-500">Vastu Client</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card fade-in">
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">"I purchased an amethyst crystal after a consultation, and it has helped tremendously with my anxiety and sleep issues. The guidance on how to cleanse and program it was invaluable."</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-[#0c025d] rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                SP
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#0c025d]">Sarah P.</h4>
+                                <p class="text-sm text-gray-500">Crystal Client</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card fade-in">
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">"The numerology reading was incredibly accurate and insightful. It helped me understand my life path and make important decisions about my career."</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-[#560568] rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                JT
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#0c025d]">James T.</h4>
+                                <p class="text-sm text-gray-500">Numerology Client</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card fade-in">
+                        <div class="star-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">"The Mantra Vortex Energy session was unlike anything I've experienced before. I felt a profound shift in my consciousness and a deep connection to my spiritual self."</p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-[#500032] rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                ML
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#0c025d]">Maya L.</h4>
+                                <p class="text-sm text-gray-500">Energy Client</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12 fade-in">
+                    <a href="#contact" class="btn btn-primary">Share Your Experience</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page section chakra-bg">
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-16 fade-in">
+                    <h2 class="text-4xl font-bold text-white mb-4">Contact Us</h2>
+                    <p class="text-lg text-white max-w-2xl mx-auto">Reach out to begin your spiritual journey or inquire about our services and crystals.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="glass-card fade-in">
+                        <h3 class="text-2xl font-bold text-white mb-6">Send a Message</h3>
+                        <form class="contact-form">
+                            <div class="mb-4">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="tel" placeholder="Your Phone">
+                            </div>
+                            <div class="mb-6">
+                                <textarea rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="glass-card fade-in">
+                        <h3 class="text-2xl font-bold text-white mb-6">Connect With Us</h3>
+                        
+                        <div class="mb-6">
+                            <p class="text-white mb-2"><i class="fas fa-map-marker-alt mr-3"></i> Online Consultations Available</p>
+                            <p class="text-white mb-2"><i class="fas fa-phone mr-3"></i> +91 98765 43210</p>
+                            <p class="text-white mb-2"><i class="fas fa-envelope mr-3"></i> info@vrajjvastu.com</p>
+                        </div>
+                        
+                        <h4 class="text-xl font-bold text-white mb-4">Follow Us</h4>
+                        <div class="flex">
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-xl font-bold text-white mb-4">Business Hours</h4>
+                            <p class="text-white mb-2">Monday - Friday: 10:00 AM - 7:00 PM</p>
+                            <p class="text-white mb-2">Saturday: 11:00 AM - 5:00 PM</p>
+                            <p class="text-white">Sunday: Closed (Online bookings available)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+    </a>
+
+    <script>
+        // Navigation and page switching
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinksContainer = document.querySelector('.nav-links');
+            
+            // Mobile menu toggle
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinksContainer.classList.toggle('active');
+            });
+            
+            // Navigation
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Close mobile menu if open
+                    navLinksContainer.classList.remove('active');
+                    
+                    // Get the page id from data attribute
+                    const pageId = this.getAttribute('data-page');
+                    
+                    // Hide all pages
+                    pages.forEach(page => {
+                        page.classList.remove('active');
+                    });
+                    
+                    // Show the selected page
+                    document.getElementById(pageId).classList.add('active');
+                    
+                    // Update active link
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Scroll to top
+                    window.scrollTo(0, 0);
+                });
+            });
+            
+            // Handle hash links
+            if (window.location.hash) {
+                const hash = window.location.hash.substring(1);
+                const link = document.querySelector(`[data-page="${hash}"]`);
+                if (link) {
+                    link.click();
+                }
+            }
+            
+            // Scroll animations
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Crystal filtering
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const crystalCards = document.querySelectorAll('.crystal-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update active button
+                    filterBtns.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    crystalCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const categories = card.getAttribute('data-category').split(' ');
+                            if (categories.includes(filter)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Form submission
+            const contactForm = document.querySelector('.contact-form');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = this.querySelector('input[type="text"]').value;
+                const email = this.querySelector('input[type="email"]').value;
+                const phone = this.querySelector('input[type="tel"]').value;
+                const message = this.querySelector('textarea').value;
+                
+                // Simple validation
+                if (!name || !email || !message) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+                
+                // Show success message (in a real scenario, you would send this data to a server)
+                alert(`Thank you, ${name}! Your message has been sent. We will contact you soon.`);
+                
+                // Reset form
+                this.reset();
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'937f484383db0027',t:'MTc0NTkzNDc3Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
