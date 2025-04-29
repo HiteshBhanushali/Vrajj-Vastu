@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VrajjVastu - Holistic Energy Healing & Spiritual Alignment</title>
+        <meta name="description" content="VrajjVastu offers expert Reiki healing, Vastu consultation, and authentic gemstones to transform your life, attract abundance, and find peace.">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'spiritual-blue': '#0c025d',
+                            'spiritual-yellow': '#ffff00',
+                            'royal-purple': '#560568',
+                            'mystic-maroon': '#500032',
+                        },
+                        fontFamily: {
+                            'sans': ['Poppins', 'sans-serif'],
+                            'serif': ['Playfair Display', 'serif'],
+                        },
+                    }
+                }
+            }
+        </script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4 {
+                font-family: 'Playfair Display', serif;
+            }
+
+            .chakra-bg {
+                background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%),
+                    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800' viewBox='0 0 800 800'%3E%3Ccircle cx='400' cy='400' r='380' fill='none' stroke='%230c025d' stroke-width='2' stroke-dasharray='8 4'/%3E%3Ccircle cx='400' cy='400' r='320' fill='none' stroke='%23560568' stroke-width='2' stroke-dasharray='8 4'/%3E%3Ccircle cx='400' cy='400' r='260' fill='none' stroke='%23500032' stroke-width='2' stroke-dasharray='8 4'/%3E%3Ccircle cx='400' cy='400' r='200' fill='none' stroke='%23ffff00' stroke-width='2' stroke-dasharray='8 4'/%3E%3Ccircle cx='400' cy='400' r='140' fill='none' stroke='%230c025d' stroke-width='2' stroke-dasharray='8 4'/%3E%3Ccircle cx='400' cy='400' r='80' fill='none' stroke='%23560568' stroke-width='2' stroke-dasharray='8 4'/%3E%3C/svg%3E");
+
+background-size: cover;
+                        background-position: center;
+                }
+
+                .service-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 25px -5px rgba(12, 2, 93, 0.3);
+                }
+
+                .crystal-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 25px -5px rgba(86, 5, 104, 0.3);
+                }
+
+                .testimonial-card {
+                    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+                }
+
+                .nav-link {
+                    position: relative;
+                }
+
+                .nav-link::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: -2px;
+                    left: 0;
+                    background-color: #ffff00;
+                    transition: width 0.3s ease;
+                }
+
+                .nav-link:hover::after {
+                    width: 100%;
+                }
+
+                .active-nav::after {
+                    width: 100%;
+                }
+
+                .section-divider {
+                    height: 3px;
+                    background: linear-gradient(90deg, transparent, #0c025d, #ffff00, #560568, transparent);
+                }
+
+                .cta-button {
+                    background: linear-gradient(135deg, #0c025d, #560568);
+                    transition: all 0.3s ease;
+                }
+
+                .cta-button:hover {
+                    background: linear-gradient(135deg, #560568, #0c025d);
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 15px rgba(12, 2, 93, 0.4);
+                }
+
+                .crystal-bg {
+                    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%),
+                    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 15 L85 50 L50 85 L15 50 Z' fill='none' stroke='%23ffff00' stroke-width='0.5'/%3E%3Cpath d='M50 20 L80 50 L50 80 L20 50 Z' fill='none' stroke='%230c025d' stroke-width='0.5'/%3E%3C/svg%3E");
+
+
+                    }
+
+                    .certificate-badge {
+                        transition: all 0.3s ease;
+                    }
+
+                    .certificate-badge:hover {
+                        transform: scale(1.05);
+                    }
+
+                    /* Mobile menu */
+                    .mobile-menu {
+                        transform: translateX(-100%);
+                        transition: transform 0.3s ease-in-out;
+                    }
+
+                    .mobile-menu.active {
+                        transform: translateX(0);
+                    }
+
+                    /* Chakra wheel animation */
+                    @keyframes spin-slow {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+
+                    @keyframes spin-reverse {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+
+                        100% {
+                            transform: rotate(-360deg);
+                        }
+                    }
+
+                    .chakra-spin {
+                        animation: spin-slow 30s linear infinite;
+                    }
+
+                    .chakra-spin-reverse {
+                        animation: spin-reverse 20s linear infinite;
+                    }
+
+                    .chakra-spin-medium {
+                        animation: spin-slow 25s linear infinite;
+                    }
+
+                    .inner-circle-pulse {
+                        animation: pulse 4s ease-in-out infinite;
+                    }
+
+                    @keyframes pulse {
+                        0% {
+                            transform: scale(1); opacity: 0.7;
+                        }
+
+                        50% {
+                            transform: scale(1.05); opacity: 1;
+                        }
+
+                        100% {
+                            transform: scale(1); opacity: 0.7;
+                        }
+                    }
+        </style>
+    </head>
+    <body>
+        <!-- Header/Navigation -->
+        <header class="fixed w-full bg-white shadow-md z-50">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="flex items-center">
+                    <h1 class="text-2xl md:text-3xl font-bold text-spiritual-blue">
+                        <span class="text-spiritual-blue">Vrajj</span>
+                        <span class="text-royal-purple">Vastu</span>
+                    </h1>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="nav-link active-nav text-spiritual-blue hover:text-royal-purple font-medium">Home</a>
+                    <a href="#about" class="nav-link text-spiritual-blue hover:text-royal-purple font-medium">About</a>
+                    <a href="#services" class="nav-link text-spiritual-blue hover:text-royal-purple font-medium">Services</a>
+                    <a href="#crystals" class="nav-link text-spiritual-blue hover:text-royal-purple font-medium">Crystals</a>
+                    <a href="#testimonials" class="nav-link text-spiritual-blue hover:text-royal-purple font-medium">Testimonials</a>
+                    <a href="#contact" class="nav-link text-spiritual-blue hover:text-royal-purple font-medium">Contact</a>
+                    <a href="#contact" class="cta-button text-white px-5 py-2 rounded-full font-medium">Book a Consultation</a>
+                </nav>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden text-spiritual-blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="mobile-menu absolute top-full left-0 w-full bg-white shadow-md md:hidden">
+                <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                    <a href="#home" class="text-spiritual-blue hover:text-royal-purple font-medium py-2">Home</a>
+                    <a href="#about" class="text-spiritual-blue hover:text-royal-purple font-medium py-2">About</a>
+                    <a href="#services" class="text-spiritual-blue hover:text-royal-purple font-medium py-2">Services</a>
+                    <a href="#crystals" class="text-spiritual-blue hover:text-royal-purple font-medium py-2">Crystals</a>
+                    <a href="#testimonials" class="text-spiritual-blue hover:text-royal-purple font-medium py-2">Testimonials</a>
+                    <a href="#contact" class="text-spiritual-blue hover:text-royal-purple font-medium py-2">Contact</a>
+                    <a href="#contact" class="cta-button text-white px-5 py-2 rounded-full font-medium text-center">Book a Consultation</a>
+                </div>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <section id="home" class="chakra-bg pt-24 md:pt-32 pb-16 md:pb-24">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-spiritual-blue mb-4">Welcome to <span class="text-royal-purple">VrajjVastu</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-700 mb-6">Your holistic partner in energy healing and spiritual alignment. Discover the perfect harmony between ancient wisdom and modern well-being.</p>
+                        <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                            <a href="#services" class="cta-button text-white px-6 py-3 rounded-full font-medium text-center">Explore Our Services</a>
+                            <a href="#contact" class="bg-white border-2 border-spiritual-blue text-spiritual-blue px-6 py-3 rounded-full font-medium hover:bg-spiritual-blue hover:text-white transition-all text-center">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="relative">
+                            <!-- Outer chakra wheel with animation -->
+                            <svg class="w-64 h-64 md:w-80 md:h-80 chakra-spin" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Chakra wheel -->
+                                <circle cx="100" cy="100" r="95" fill="none" stroke="#0c025d" stroke-width="1" />
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#560568" stroke-width="1" />
+                                <circle cx="100" cy="100" r="65" fill="none" stroke="#500032" stroke-width="1" />
+                                <circle cx="100" cy="100" r="50" fill="none" stroke="#ffff00" stroke-width="1" />
+                                <!-- Chakra symbols -->
+                                <g fill="#0c025d">
+                                    <path d="M100,5 L105,20 H95 Z" />
+                                    <path d="M100,195 L105,180 H95 Z" />
+                                    <path d="M5,100 L20,105 V95 Z" />
+                                    <path d="M195,100 L180,105 V95 Z" />
+                                    <path d="M29.3,29.3 L39.3,39.3 L34.3,44.3 L24.3,34.3 Z" />
+                                    <path d="M170.7,29.3 L160.7,39.3 L165.7,44.3 L175.7,34.3 Z" />
+                                    <path d="M29.3,170.7 L39.3,160.7 L34.3,155.7 L24.3,165.7 Z" />
+                                    <path d="M170.7,170.7 L160.7,160.7 L165.7,155.7 L175.7,165.7 Z" />
+                                </g>
+                            </svg>
+                            <!-- Middle layer with reverse animation -->
+                            <svg class="absolute inset-0 w-64 h-64 md:w-80 md:h-80 chakra-spin-reverse" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <g fill="none" stroke="#560568" stroke-width="0.5">
+                                    <path d="M100,40 L100,160" />
+                                    <path d="M40,100 L160,100" />
+                                    <path d="M58.6,58.6 L141.4,141.4" />
+                                    <path d="M58.6,141.4 L141.4,58.6" />
+                                    <circle cx="100" cy="100" r="40" />
+                                </g>
+                                <!-- Decorative elements -->
+                                <g fill="#ffff00" fill-opacity="0.3">
+                                    <circle cx="100" cy="40" r="5" />
+                                    <circle cx="100" cy="160" r="5" />
+                                    <circle cx="40" cy="100" r="5" />
+                                    <circle cx="160" cy="100" r="5" />
+                                    <circle cx="58.6" cy="58.6" r="5" />
+                                    <circle cx="141.4" cy="141.4" r="5" />
+                                    <circle cx="58.6" cy="141.4" r="5" />
+                                    <circle cx="141.4" cy="58.6" r="5" />
+                                </g>
+                            </svg>
+                            <!-- Inner layer with medium speed animation -->
+                            <svg class="absolute inset-0 w-64 h-64 md:w-80 md:h-80 chakra-spin-medium" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="centerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#0c025d" stop-opacity="0.1" />
+                                        <stop offset="100%" stop-color="#560568" stop-opacity="0.1" />
+                                    </linearGradient>
+                                </defs>
+                                <!-- Decorative patterns -->
+                                <g stroke="#500032" stroke-width="0.5" fill="none">
+                                    <path d="M100,70 Q120,100 100,130 Q80,100 100,70" />
+                                    <path d="M70,100 Q100,80 130,100 Q100,120 70,100" />
+                                    <path d="M85,85 Q100,70 115,85 Q130,100 115,115 Q100,130 85,115 Q70,100 85,85" />
+                                </g>
+                            </svg>
+                            <!-- Center pulsing element -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="bg-white bg-opacity-80 rounded-full p-4 shadow-lg inner-circle-pulse">
+                                    <svg class="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M50 10C27.9 10 10 27.9 10 50C10 72.1 27.9 90 50 90C72.1 90 90 72.1 90 50C90 27.9 72.1 10 50 10Z" stroke="#0c025d" stroke-width="2" />
+                                        <path d="M50 20C33.4 20 20 33.4 20 50C20 66.6 33.4 80 50 80C66.6 80 80 66.6 80 50C80 33.4 66.6 20 50 20Z" fill="#ffff00" fill-opacity="0.2" />
+                                        <path d="M50 30C39 30 30 39 30 50C30 61 39 70 50 70C61 70 70 61 70 50C70 39 61 30 50 30Z" fill="#560568" fill-opacity="0.2" />
+                                        <path d="M50 40C44.5 40 40 44.5 40 50C40 55.5 44.5 60 50 60C55.5 60 60 55.5 60 50C60 44.5 55.5 40 50 40Z" fill="#0c025d" fill-opacity="0.3" />
+                                        <path d="M50 45C47.2 45 45 47.2 45 50C45 52.8 47.2 55 50 55C52.8 55 55 52.8 55 50C55 47.2 52.8 45 50 45Z" fill="#500032" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-spiritual-blue mb-2">About Us</h2>
+                    <div class="section-divider w-24 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover the story behind VrajjVastu and our mission to bring harmony and balance to your life.</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <div class="relative">
+                            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-spiritual-yellow shadow-xl mx-auto">
+                                <!-- Symbolic image of healing/spirituality -->
+                                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                    <defs>
+                                        <radialGradient id="healingGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                                            <stop offset="0%" stop-color="#f5f5f5" />
+                                            <stop offset="100%" stop-color="#e0e0e0" />
+                                        </radialGradient>
+                                    </defs>
+                                    <rect width="200" height="200" fill="url(#healingGradient)" />
+                                    <!-- Lotus flower -->
+                                    <g transform="translate(100, 100)">
+                                        <!-- Petals -->
+                                        <path d="M0,-40 C20,-30 20,-10 0,0 C-20,-10 -20,-30 0,-40" fill="#560568" opacity="0.7" transform="rotate(0)" />
+                                        <path d="M0,-40 C20,-30 20,-10 0,0 C-20,-10 -20,-30 0,-40" fill="#560568" opacity="0.7" transform="rotate(45)" />
+                                        <path d="M0,-40 C20,-30 20,-10 0,0 C-20,-10 -20,-30 0,-40" fill="#560568" opacity="0.7" transform="rotate(90)" />
+                                        <path d="M0,-40 C20,-30 20,-10 0,0 C-20,-10 -20,-30 0,-40" fill="#560568" opacity="0.7" transform="rotate(135)" />
+                                        <path d="M0,-40 C20,-30 20,-10 0,0 C-20,-10 -20,-30 0,-40" fill="#560568" opacity="0.7" transform="rotate(180)" />
+                                        <path d="M0,-40 C20,-30 20,-10 0,0 C-20,-10 -20,-30 0,-40" fill="#560568" opacity="0.7" transform="rotate(225)" />
+                                        <path d="M0,-40 C20,-30 20,-10 0,0 C-20,-10 -20,-30 0,-40" fill="#560568" opacity="0.7" transform="rotate(270)" />
+                                        <path d="M0,-40 C20,-30 20,-10 0,0 C-20,-10 -20,-30 0,-40" fill="#560568" opacity="0.7" transform="rotate(315)" />
+                                        <!-- Inner petals -->
+                                        <path d="M0,-25 C12,-20 12,-5 0,0 C-12,-5 -12,-20 0,-25" fill="#0c025d" opacity="0.7" transform="rotate(22.5)" />
+                                        <path d="M0,-25 C12,-20 12,-5 0,0 C-12,-5 -12,-20 0,-25" fill="#0c025d" opacity="0.7" transform="rotate(67.5)" />
+                                        <path d="M0,-25 C12,-20 12,-5 0,0 C-12,-5 -12,-20 0,-25" fill="#0c025d" opacity="0.7" transform="rotate(112.5)" />
+                                        <path d="M0,-25 C12,-20 12,-5 0,0 C-12,-5 -12,-20 0,-25" fill="#0c025d" opacity="0.7" transform="rotate(157.5)" />
+                                        <path d="M0,-25 C12,-20 12,-5 0,0 C-12,-5 -12,-20 0,-25" fill="#0c025d" opacity="0.7" transform="rotate(202.5)" />
+                                        <path d="M0,-25 C12,-20 12,-5 0,0 C-12,-5 -12,-20 0,-25" fill="#0c025d" opacity="0.7" transform="rotate(247.5)" />
+                                        <path d="M0,-25 C12,-20 12,-5 0,0 C-12,-5 -12,-20 0,-25" fill="#0c025d" opacity="0.7" transform="rotate(292.5)" />
+                                        <path d="M0,-25 C12,-20 12,-5 0,0 C-12,-5 -12,-20 0,-25" fill="#0c025d" opacity="0.7" transform="rotate(337.5)" />
+                                        <!-- Center -->
+                                        <circle cx="0" cy="0" r="10" fill="#ffff00" />
+                                    </g>
+                                    <!-- Energy lines -->
+                                    <g stroke="#0c025d" stroke-width="0.5" opacity="0.3">
+                                        <path d="M20,100 Q50,70 100,70 Q150,70 180,100" fill="none" />
+                                        <path d="M20,110 Q50,140 100,140 Q150,140 180,110" fill="none" />
+                                        <path d="M100,20 Q70,50 70,100 Q70,150 100,180" fill="none" />
+                                        <path d="M110,20 Q140,50 140,100 Q140,150 110,180" fill="none" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="absolute -bottom-4 right-1/4 bg-spiritual-blue text-white px-6 py-3 rounded-lg shadow-lg">
+                                <p class="text-sm italic">"Healing is the gateway to harmony."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <h3 class="text-2xl font-bold text-spiritual-blue mb-4">Our Journey</h3>
+                        <p class="text-gray-700 mb-4">VrajjVastu is your holistic partner in energy healing and spiritual alignment. With over 15 years of Reiki Healing experience and 8 years as a trusted Vastu Consultant, we offer a range of powerful services that bridge ancient wisdom with modern well-being.</p>
+                        <p class="text-gray-700 mb-6">We are also certified dealers of semi-precious gemstones and crystals, offering only authentic, energetically potent pieces. We combine deep intuitive power, ancient spiritual techniques, and certified expertise to help people transform their lives, attract abundance, and find peace.</p>
+                        <h3 class="text-2xl font-bold text-spiritual-blue mb-4">Our Certifications</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="certificate-badge bg-white rounded-lg p-4 shadow-md text-center">
+                                <div class="w-12 h-12 mx-auto mb-2 bg-spiritual-blue bg-opacity-10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-certificate text-spiritual-blue"></i>
+                                </div>
+                                <p class="text-sm font-medium text-gray-700">Certified Expert Vastu Vid</p>
+                            </div>
+                            <div class="certificate-badge bg-white rounded-lg p-4 shadow-md text-center">
+                                <div class="w-12 h-12 mx-auto mb-2 bg-spiritual-blue bg-opacity-10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-music text-spiritual-blue"></i>
+                                </div>
+                                <p class="text-sm font-medium text-gray-700">Certified Swar Sadhika</p>
+                            </div>
+                            <div class="certificate-badge bg-white rounded-lg p-4 shadow-md text-center">
+                                <div class="w-12 h-12 mx-auto mb-2 bg-spiritual-blue bg-opacity-10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-hands text-spiritual-blue"></i>
+                                </div>
+                                <p class="text-sm font-medium text-gray-700">Lama fera Master</p>
+                            </div>
+                            <div class="certificate-badge bg-white rounded-lg p-4 shadow-md text-center">
+                                <div class="w-12 h-12 mx-auto mb-2 bg-spiritual-blue bg-opacity-10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-om text-spiritual-blue"></i>
+                                </div>
+                                <p class="text-sm font-medium text-gray-700">Certified Mantra Vortex Energizer</p>
+                            </div>
+                            <div class="certificate-badge bg-white rounded-lg p-4 shadow-md text-center">
+                                <div class="w-12 h-12 mx-auto mb-2 bg-spiritual-blue bg-opacity-10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-hand-sparkles text-spiritual-blue"></i>
+                                </div>
+                                <p class="text-sm font-medium text-gray-700">Certified Palmist</p>
+                            </div>
+                            <div class="certificate-badge bg-white rounded-lg p-4 shadow-md text-center">
+                                <div class="w-12 h-12 mx-auto mb-2 bg-spiritual-blue bg-opacity-10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-sun text-spiritual-blue"></i>
+                                </div>
+                                <p class="text-sm font-medium text-gray-700">Reiki Teacher of NRSP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section id="services" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-spiritual-blue mb-2">Our Services</h2>
+                    <div class="section-divider w-24 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover our range of holistic services designed to bring balance, healing, and spiritual alignment to your life.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-24 bg-spiritual-blue flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Specialised Intuition Power</h3>
+                            <p class="text-gray-600">Tap into your innate intuitive abilities with our specialized guidance, helping you make better decisions and connect with your higher self.</p>
+                        </div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-24 bg-royal-purple flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 13v10h-6v-6h-6v6h-6v-10h-3l12-12 12 12h-3zm-1-5.907v-5.093h-3v2.093l3 3z" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Astro Vastu</h3>
+                            <p class="text-gray-600">A unique blend of astrology and Vastu Shastra principles to optimize your living spaces for maximum positive energy and cosmic alignment.</p>
+                        </div>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-24 bg-mystic-maroon flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Reiki Healing</h3>
+                            <p class="text-gray-600">Experience the gentle yet powerful energy healing technique that promotes relaxation, reduces stress, and supports your body's natural healing abilities.</p>
+                        </div>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-24 bg-spiritual-blue flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Dowser</h3>
+                            <p class="text-gray-600">Discover hidden energies and locate beneficial resources with our expert dowsing services, helping you create more harmonious environments.</p>
+                        </div>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-24 bg-royal-purple flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Mantra Vortex Energies</h3>
+                            <p class="text-gray-600">Harness the transformative power of sacred sound vibrations to create energy vortexes that clear blockages and enhance spiritual growth.</p>
+                        </div>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-24 bg-mystic-maroon flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Lama fera Healing</h3>
+                            <p class="text-gray-600">Experience this powerful Tibetan energy healing system that removes negative energies and promotes deep healing on all levels.</p>
+                        </div>
+                    </div>
+                    <!-- Service 7 -->
+                    <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-24 bg-spiritual-blue flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Palmistry</h3>
+                            <p class="text-gray-600">Gain insights into your character, life path, and potential future through our expert palm reading services based on ancient wisdom.</p>
+                        </div>
+                    </div>
+                    <!-- Service 8 -->
+                    <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-24 bg-royal-purple flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Astrology</h3>
+                            <p class="text-gray-600">Discover how celestial bodies influence your life with our personalized astrological readings and guidance for navigating life's journey.</p>
+                        </div>
+                    </div>
+                    <!-- Service 9 -->
+                    <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-24 bg-mystic-maroon flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Numerology</h3>
+                            <p class="text-gray-600">Uncover the hidden meanings behind the numbers in your life and how they influence your personality, relationships, and destiny.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Crystals & Gemstones Section -->
+        <section id="crystals" class="py-16 crystal-bg">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-spiritual-blue mb-2">Crystals & Gemstones</h2>
+                    <div class="section-divider w-24 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover our collection of authentic, energetically potent crystals and gemstones to enhance your spiritual practice and daily life.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Crystal 1 -->
+                    <div class="crystal-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-48 relative overflow-hidden">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <defs>
+                                    <linearGradient id="amethystGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#9b59b6" />
+                                        <stop offset="100%" stop-color="#8e44ad" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="200" height="200" fill="#f8f8f8" />
+                                <g transform="translate(100, 100)">
+                                    <path d="M0,-60 L40,-20 L20,40 L-20,40 L-40,-20 Z" fill="url(#amethystGradient)" />
+                                    <path d="M0,-60 L40,-20 L20,40 L-20,40 L-40,-20 Z" fill="white" fill-opacity="0.3" transform="scale(0.8)" />
+                                    <path d="M0,-60 L40,-20 L20,40 L-20,40 L-40,-20 Z" fill="white" fill-opacity="0.2" transform="scale(0.6)" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Amethyst</h3>
+                            <p class="text-gray-600 mb-4">A powerful and protective stone that brings calm, clarity, and enhances spiritual growth.</p>
+                            <a href="#contact" class="inline-block bg-spiritual-blue text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-royal-purple transition-colors">Inquire Now</a>
+                        </div>
+                    </div>
+                    <!-- Crystal 2 -->
+                    <div class="crystal-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-48 relative overflow-hidden">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <defs>
+                                    <linearGradient id="citrineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#ffd700" />
+                                        <stop offset="100%" stop-color="#daa520" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="200" height="200" fill="#f8f8f8" />
+                                <g transform="translate(100, 100)">
+                                    <path d="M0,-50 L30,-30 L50,0 L30,30 L0,50 L-30,30 L-50,0 L-30,-30 Z" fill="url(#citrineGradient)" />
+                                    <path d="M0,-50 L30,-30 L50,0 L30,30 L0,50 L-30,30 L-50,0 L-30,-30 Z" fill="white" fill-opacity="0.3" transform="scale(0.8)" />
+                                    <path d="M0,-50 L30,-30 L50,0 L30,30 L0,50 L-30,30 L-50,0 L-30,-30 Z" fill="white" fill-opacity="0.2" transform="scale(0.6)" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Citrine</h3>
+                            <p class="text-gray-600 mb-4">Known as the "merchant's stone," citrine attracts prosperity, positive energy, and aids in manifestation.</p>
+                            <a href="#contact" class="inline-block bg-spiritual-blue text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-royal-purple transition-colors">Inquire Now</a>
+                        </div>
+                    </div>
+                    <!-- Crystal 3 -->
+                    <div class="crystal-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-48 relative overflow-hidden">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <defs>
+                                    <linearGradient id="pyriteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#b8860b" />
+                                        <stop offset="100%" stop-color="#8b4513" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="200" height="200" fill="#f8f8f8" />
+                                <g transform="translate(100, 100)">
+                                    <rect x="-40" y="-40" width="80" height="80" fill="url(#pyriteGradient)" />
+                                    <rect x="-30" y="-30" width="60" height="60" fill="url(#pyriteGradient)" stroke="white" stroke-width="1" />
+                                    <rect x="-20" y="-20" width="40" height="40" fill="url(#pyriteGradient)" stroke="white" stroke-width="1" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Pyrite</h3>
+                            <p class="text-gray-600 mb-4">Often called "Fool's Gold," pyrite attracts wealth, enhances mental clarity, and stimulates creativity.</p>
+                            <a href="#contact" class="inline-block bg-spiritual-blue text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-royal-purple transition-colors">Inquire Now</a>
+                        </div>
+                    </div>
+                    <!-- Crystal 4 -->
+                    <div class="crystal-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-48 relative overflow-hidden">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <defs>
+                                    <linearGradient id="jadeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#00a86b" />
+                                        <stop offset="100%" stop-color="#008b45" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="200" height="200" fill="#f8f8f8" />
+                                <g transform="translate(100, 100)">
+                                    <circle cx="0" cy="0" r="50" fill="url(#jadeGradient)" />
+                                    <path d="M0,-30 C20,-30 30,-20 30,0 C30,20 20,30 0,30 C-20,30 -30,20 -30,0 C-30,-20 -20,-30 0,-30" fill="white" fill-opacity="0.2" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Jade</h3>
+                            <p class="text-gray-600 mb-4">A stone of serenity and purity that attracts good luck, friendship, and provides protection from negative energies.</p>
+                            <a href="#contact" class="inline-block bg-spiritual-blue text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-royal-purple transition-colors">Inquire Now</a>
+                        </div>
+                    </div>
+                    <!-- Crystal 5 -->
+                    <div class="crystal-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-48 relative overflow-hidden">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <defs>
+                                    <linearGradient id="aventurineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#3cb371" />
+                                        <stop offset="100%" stop-color="#2e8b57" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="200" height="200" fill="#f8f8f8" />
+                                <g transform="translate(100, 100)">
+                                    <path d="M0,-50 L20,-40 L40,-20 L50,0 L40,20 L20,40 L0,50 L-20,40 L-40,20 L-50,0 L-40,-20 L-20,-40 Z" fill="url(#aventurineGradient)" />
+                                    <path d="M0,-30 L12,-24 L24,-12 L30,0 L24,12 L12,24 L0,30 L-12,24 L-24,12 L-30,0 L-24,-12 L-12,-24 Z" fill="white" fill-opacity="0.2" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Green Aventurine</h3>
+                            <p class="text-gray-600 mb-4">Known as the "Stone of Opportunity," it promotes emotional healing, harmony, and attracts good fortune.</p>
+                            <a href="#contact" class="inline-block bg-spiritual-blue text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-royal-purple transition-colors">Inquire Now</a>
+                        </div>
+                    </div>
+                    <!-- Crystal 6 -->
+                    <div class="crystal-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-48 relative overflow-hidden">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <defs>
+                                    <linearGradient id="quartzGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#ffffff" />
+                                        <stop offset="100%" stop-color="#f0f0f0" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="200" height="200" fill="#f8f8f8" />
+                                <g transform="translate(100, 100)">
+                                    <path d="M0,-60 L15,-50 L15,50 L0,60 L-15,50 L-15,-50 Z" fill="url(#quartzGradient)" />
+                                    <path d="M0,-60 L15,-50 L15,50 L0,60 L-15,50 L-15,-50 Z" fill="url(#quartzGradient)" transform="rotate(60)" />
+                                    <path d="M0,-60 L15,-50 L15,50 L0,60 L-15,50 L-15,-50 Z" fill="url(#quartzGradient)" transform="rotate(120)" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Clear Quartz</h3>
+                            <p class="text-gray-600 mb-4">The "Master Healer" that amplifies energy, thought, and the effect of other crystals, while providing clarity and focus.</p>
+                            <a href="#contact" class="inline-block bg-spiritual-blue text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-royal-purple transition-colors">Inquire Now</a>
+                        </div>
+                    </div>
+                    <!-- Crystal 7 -->
+                    <div class="crystal-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-48 relative overflow-hidden">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <defs>
+                                    <linearGradient id="tigerEyeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#b8860b" />
+                                        <stop offset="50%" stop-color="#8b4513" />
+                                        <stop offset="100%" stop-color="#654321" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="200" height="200" fill="#f8f8f8" />
+                                <g transform="translate(100, 100)">
+                                    <ellipse cx="0" cy="0" rx="50" ry="40" fill="url(#tigerEyeGradient)" />
+                                    <ellipse cx="0" cy="0" rx="40" ry="30" fill="url(#tigerEyeGradient)" stroke="#daa520" stroke-width="0.5" />
+                                    <ellipse cx="0" cy="0" rx="30" ry="20" fill="url(#tigerEyeGradient)" stroke="#daa520" stroke-width="0.5" />
+                                    <ellipse cx="0" cy="0" rx="20" ry="10" fill="url(#tigerEyeGradient)" stroke="#daa520" stroke-width="0.5" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Tiger Eye</h3>
+                            <p class="text-gray-600 mb-4">A stone of courage and protection that helps you overcome fear, build confidence, and make clear decisions.</p>
+                            <a href="#contact" class="inline-block bg-spiritual-blue text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-royal-purple transition-colors">Inquire Now</a>
+                        </div>
+                    </div>
+                    <!-- Crystal 8 -->
+                    <div class="crystal-card bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300">
+                        <div class="h-48 relative overflow-hidden">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <defs>
+                                    <linearGradient id="seleniteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#ffffff" />
+                                        <stop offset="100%" stop-color="#f5f5f5" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="200" height="200" fill="#f8f8f8" />
+                                <g transform="translate(100, 100)">
+                                    <path d="M-40,-50 L40,-50 L50,-30 L50,30 L40,50 L-40,50 L-50,30 L-50,-30 Z" fill="url(#seleniteGradient)" />
+                                    <line x1="-40" y1="-30" x2="40" y2="-30" stroke="#ffffff" stroke-width="1" />
+                                    <line x1="-40" y1="-10" x2="40" y2="-10" stroke="#ffffff" stroke-width="1" />
+                                    <line x1="-40" y1="10" x2="40" y2="10" stroke="#ffffff" stroke-width="1" />
+                                    <line x1="-40" y1="30" x2="40" y2="30" stroke="#ffffff" stroke-width="1" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-spiritual-blue mb-2">Selenite</h3>
+                            <p class="text-gray-600 mb-4">A high-vibration crystal that cleanses energy fields, brings mental clarity, and deepens spiritual connection.</p>
+                            <a href="#contact" class="inline-block bg-spiritual-blue text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-royal-purple transition-colors">Inquire Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#contact" class="cta-button text-white px-8 py-4 rounded-full font-medium inline-block">Shop Our Full Collection</a>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-spiritual-blue mb-2">What Our Clients Say</h2>
+                    <div class="section-divider w-24 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Hear from those who have experienced the transformative power of our services.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card rounded-xl shadow-md p-6 relative">
+                        <div class="absolute top-4 right-4 text-spiritual-yellow">
+                            <i class="fas fa-quote-right text-3xl opacity-30"></i>
+                        </div>
+                        <div class="mb-4 text-spiritual-yellow">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 mb-6">"The Vastu consultation completely transformed my home's energy. Since implementing the suggested changes, my business has flourished and my family's health has improved dramatically. Truly life-changing!"</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-spiritual-blue rounded-full flex items-center justify-center text-white font-bold text-xl"> RP </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-spiritual-blue">Rajesh Patel</h4>
+                                <p class="text-sm text-gray-600">Mumbai, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card rounded-xl shadow-md p-6 relative">
+                        <div class="absolute top-4 right-4 text-spiritual-yellow">
+                            <i class="fas fa-quote-right text-3xl opacity-30"></i>
+                        </div>
+                        <div class="mb-4 text-spiritual-yellow">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 mb-6">"I was skeptical at first, but after just three Reiki sessions, my chronic back pain has reduced significantly. The energy healing was gentle yet powerful, and I felt a deep sense of peace during each session."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-royal-purple rounded-full flex items-center justify-center text-white font-bold text-xl"> AS </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-spiritual-blue">Anita Sharma</h4>
+                                <p class="text-sm text-gray-600">Delhi, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card rounded-xl shadow-md p-6 relative">
+                        <div class="absolute top-4 right-4 text-spiritual-yellow">
+                            <i class="fas fa-quote-right text-3xl opacity-30"></i>
+                        </div>
+                        <div class="mb-4 text-spiritual-yellow">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="text-gray-700 mb-6">"The crystals I purchased are not only beautiful but incredibly powerful. The clear quartz has enhanced my meditation practice, and the amethyst by my bedside has improved my sleep quality tremendously."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-mystic-maroon rounded-full flex items-center justify-center text-white font-bold text-xl"> PK </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-spiritual-blue">Priya Kapoor</h4>
+                                <p class="text-sm text-gray-600">Bangalore, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card rounded-xl shadow-md p-6 relative">
+                        <div class="absolute top-4 right-4 text-spiritual-yellow">
+                            <i class="fas fa-quote-right text-3xl opacity-30"></i>
+                        </div>
+                        <div class="mb-4 text-spiritual-yellow">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 mb-6">"The palmistry reading was incredibly accurate and insightful. It helped me understand my strengths and weaknesses better, guiding me to make important career decisions that have already started paying off."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-spiritual-blue rounded-full flex items-center justify-center text-white font-bold text-xl"> VM </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-spiritual-blue">Vikram Mehta</h4>
+                                <p class="text-sm text-gray-600">Pune, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card rounded-xl shadow-md p-6 relative">
+                        <div class="absolute top-4 right-4 text-spiritual-yellow">
+                            <i class="fas fa-quote-right text-3xl opacity-30"></i>
+                        </div>
+                        <div class="mb-4 text-spiritual-yellow">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 mb-6">"The Lama fera healing session was a profound experience. I felt a deep release of negative energy and emotional blockages. Weeks later, I still feel lighter and more connected to my spiritual path."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-royal-purple rounded-full flex items-center justify-center text-white font-bold text-xl"> SG </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-spiritual-blue">Sanjay Gupta</h4>
+                                <p class="text-sm text-gray-600">Hyderabad, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Google Reviews Link -->
+                    <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center">
+                        <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-4">
+                            <i class="fab fa-google text-white text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-spiritual-blue mb-2">Read More Reviews</h4>
+                        <p class="text-gray-600 text-center mb-4">See what others are saying about us on Google Reviews.</p>
+                        <a href="#" class="bg-red-500 text-white px-6 py-2 rounded-full font-medium hover:bg-red-600 transition-colors">View Google Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-spiritual-blue mb-2">Contact Us</h2>
+                    <div class="section-divider w-24 mx-auto mb-6"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Reach out to us for consultations, inquiries, or to schedule a session. We're here to help you on your spiritual journey.</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                        <form class="bg-gray-50 rounded-xl shadow-md p-8">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-spiritual-blue" placeholder="Enter your name">
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-spiritual-blue" placeholder="Enter your email">
+                            </div>
+                            <div class="mb-6">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-spiritual-blue" placeholder="Enter your phone number">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-spiritual-blue" placeholder="How can we help you?"></textarea>
+                            </div>
+                            <button type="submit" class="cta-button text-white px-6 py-3 rounded-full font-medium w-full">Send Message</button>
+                            <p class="text-center text-sm text-gray-500 mt-4">This is a demo form. In a live website, this would send your inquiry to VrajjVastu.</p>
+                        </form>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-gray-50 rounded-xl shadow-md p-8 h-full">
+                            <h3 class="text-2xl font-bold text-spiritual-blue mb-6">Get in Touch</h3>
+                            <div class="flex items-start mb-6">
+                                <div class="w-12 h-12 bg-spiritual-blue bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-spiritual-blue"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-700">Our Location</h4>
+                                    <p class="text-gray-600">Online Consultations Available</p>
+                                    <p class="text-gray-600">In-person sessions by appointment only</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start mb-6">
+                                <div class="w-12 h-12 bg-spiritual-blue bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone-alt text-spiritual-blue"></i>
+                                </div>
+                                <div>
+                                    <script>
+                                        (function() {
+                                            function c() {
+                                                var b = a.contentDocument || a.contentWindow.document;
+                                                if (b) {
+                                                    var d = b.createElement('script');
+                                                    d.innerHTML = "window.__CF$cv$params={r:'937eb142a1cfeb21',t:'MTc0NTkyODU4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+                                                    b.getElementsByTagName('head')[0].appendChild(d)
+                                                }
+                                            }
+                                            if (document.body) {
+                                                var a = document.createElement('iframe');
+                                                a.height = 1;
+                                                a.width = 1;
+                                                a.style.position = 'absolute';
+                                                a.style.top = 0;
+                                                a.style.left = 0;
+                                                a.style.border = 'none';
+                                                a.style.visibility = 'hidden';
+                                                document.body.appendChild(a);
+                                                if ('loading' !== document.readyState) c();
+                                                else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c);
+                                                else {
+                                                    var e = document.onreadystatechange || function() {};
+                                                    document.onreadystatechange = function(b) {
+                                                        e(b);
+                                                        'loading' !== document.readyState && (document.onreadystatechange = e, c())
+                                                    }
+                                                }
+                                            }
+                                        })();
+                                    </script>
+                                    </script>
